@@ -9,7 +9,7 @@ public class Main {
         student.add("Night");
 
         System.out.println("There are : "+student.size()+ " student.");
-        student.remove("J");
+        student.remove("Pooh");
         System.out.println("There are : "+student.size()+ " student.");
     }
 }
