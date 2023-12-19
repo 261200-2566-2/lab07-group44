@@ -2,14 +2,35 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        HashSet<String> student = new HashSet<>();
-        student.add("Pooh");
-        student.add("J");
-        student.add("Gut-jung");
-        student.add("Night");
+        HashSet<String> studentGroup1 = new HashSet<>();
+        studentGroup1.add("Pooh");
+        studentGroup1.add("J");
+        studentGroup1.add("Gut-jung");
+        studentGroup1.add("Palm");
+        System.out.print("Group 1 : ");
+        for (String student : studentGroup1) {
+            System.out.print(student+" ");
+        }
+        System.out.println();
 
-        System.out.println("There are : "+student.size()+ " student.");
-        student.remove("Pooh");
-        System.out.println("There are : "+student.size()+ " student.");
+        HashSet<String> studentGroup2 = new HashSet<>();
+        studentGroup2.add("Phoom");
+        studentGroup2.add("Gut-jung");
+        studentGroup2.add("Night");
+        System.out.print("Group 2 : ");
+        for (String student : studentGroup2) {
+            System.out.print(student+" ");
+        }
+        System.out.println();
+
+        studentGroup1.addAll(studentGroup2);
+
+        System.out.print("Merged Group: ");
+        for (String student : studentGroup1) {
+            System.out.print(student + " ");
+        }
+        System.out.println();
+
+
     }
 }

@@ -1,25 +1,29 @@
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
 import java.util.Set;
 
 public class HashSet<E> implements Set<E> {
 
-    private final Map<E, Boolean> hash;
+    private final HashMap<E, Boolean> hash;
 
     public HashSet() {
         hash = new HashMap<>();
     }
 
     @Override
-    public Object[] toArray() {
-        return null;
+    public <T> T[] toArray(T[] a) {
+        return hash.keySet().toArray(a);
     }
 
     @Override
-    public <T> T[] toArray(T[] a) {
-        return null;
+    public Iterator<E> iterator() {
+        return hash.keySet().iterator();
+    }
+
+    @Override
+    public Object[] toArray() {
+        return new Object[0];
     }
 
     @Override
@@ -35,11 +39,6 @@ public class HashSet<E> implements Set<E> {
     @Override
     public boolean contains(Object o) {
         return hash.containsKey(o);
-    }
-
-    @Override
-    public Iterator<E> iterator() {
-        return null;
     }
 
     @Override
