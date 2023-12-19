@@ -2,16 +2,35 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.print("Hello and welcome!");
-
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        HashSet<String> studentGroup1 = new HashSet<>();
+        studentGroup1.add("Pooh");
+        studentGroup1.add("J");
+        studentGroup1.add("Gut-jung");
+        studentGroup1.add("Palm");
+        System.out.print("Group 1 : ");
+        for (String student : studentGroup1) {
+            System.out.print(student+" ");
         }
+        System.out.println();
+
+        HashSet<String> studentGroup2 = new HashSet<>();
+        studentGroup2.add("Phoom");
+        studentGroup2.add("Gut-jung");
+        studentGroup2.add("Night");
+        System.out.print("Group 2 : ");
+        for (String student : studentGroup2) {
+            System.out.print(student+" ");
+        }
+        System.out.println();
+
+        studentGroup1.addAll(studentGroup2);
+
+        System.out.print("Merged Group: ");
+        for (String student : studentGroup1) {
+            System.out.print(student + " ");
+        }
+        System.out.println();
+
+
     }
 }
